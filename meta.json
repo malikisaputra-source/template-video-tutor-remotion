@@ -1,0 +1,11 @@
+{
+  "slug": "template-video-tutor-remotion",
+  "judul": "Template Video Tutor Reels (Remotion)",
+  "ringkas": "Template video tutorial 9:16 berbasis kode: hook, 3 langkah, prompt diketik, hasil, dan ajakan. Ganti teks di satu berkas.",
+  "teknologi": ["Remotion 4", "React 19", "TypeScript"],
+  "kategori": "Template Video",
+  "tier": "premium",
+  "fitur": ["Format reels 1080x1920 30fps", "7 adegan siap pakai", "Latar grid gelap/terang bergantian", "Header meta monospace", "Kartu langkah dengan penanda progres", "Blok prompt efek mengetik", "Semua teks di src/konten.ts", "Slot musik opsional"],
+  "cara": ["Install Node.js 18+", "Jalankan npm install", "Ubah teks di src/konten.ts", "Pratinjau dengan npm run studio", "Render dengan npm run render"],
+  "demo": null
+}

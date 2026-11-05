@@ -1,0 +1,22 @@
+{
+  "name": "template-video-tutor-remotion",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "studio": "remotion studio",
+    "render": "remotion render TutorReels out/video.mp4",
+    "still": "remotion still TutorReels out/still.png --frame=30",
+    "cek": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.536",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "remotion": "4.0.536"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.0",
+    "typescript": "^5.6.3"
+  }
+}
