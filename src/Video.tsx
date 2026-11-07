@@ -1,3 +1,4 @@
+/* kredit-maliki: Template oleh Maliki Saputra (@malikisaputra) — https://malikisaputra.biz.id. Lisensi MIT + wajib atribusi (lihat LICENSE). */
 import React from "react";
 import { AbsoluteFill, Audio, Series, staticFile } from "remotion";
 import { konten } from "./konten";

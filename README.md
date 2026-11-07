@@ -43,3 +43,8 @@ MIT — lihat `LICENSE`.
 
 ## Kredit
 Dibuat oleh Maliki Studio — malikisaputra.biz.id, follow TikTok/IG @malikisaputra
+
+---
+
+<!-- kredit-maliki -->
+**Kredit:** Template oleh Maliki Saputra (@malikisaputra) — https://malikisaputra.biz.id. Kredit di footer & kepala berkas wajib dipertahankan (lihat LICENSE).

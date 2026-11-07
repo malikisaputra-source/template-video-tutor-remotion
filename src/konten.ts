@@ -1,3 +1,4 @@
+/* kredit-maliki: Template oleh Maliki Saputra (@malikisaputra) — https://malikisaputra.biz.id. Lisensi MIT + wajib atribusi (lihat LICENSE). */
 // SEMUA teks video ada di sini. Ganti isinya, simpan, lalu render ulang.
 // Durasi dalam frame (30 frame = 1 detik).
 export const konten = {
