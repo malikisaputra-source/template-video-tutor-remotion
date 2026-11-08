@@ -39,7 +39,7 @@ public/             tempat musik.mp3 (opsional)
 - Warna tiap langkah: field `warna` (`biru`/`oranye`/`hijau`/`ungu`) di `src/konten.ts`.
 
 ## Lisensi
-MIT — lihat `LICENSE`.
+MIT + syarat tambahan (lihat `LICENSE`): gratis dipakai untuk usaha/organisasi sendiri dan boleh diubah, **wajib mencantumkan kreator** (Template oleh Maliki Saputra, @malikisaputra), dan **tidak boleh diperjualbelikan** tanpa izin. Mau menjual atau kerja sama? Diskusikan dulu dengan kreatornya.
 
 ## Kredit
 Dibuat oleh Maliki Studio — malikisaputra.biz.id, follow TikTok/IG @malikisaputra
@@ -88,6 +88,6 @@ Kamu tidak perlu jago coding. Template ini sudah disiapkan supaya mudah diubah A
 - Simpan salinan folder asli sebelum mengubah, jadi bisa balik kalau ada yang rusak.
 - Kalau ada error, salin pesan errornya (klik kanan > Inspect > Console) lalu tempel ke AI.
 - Data aplikasi tersimpan di browser (localStorage). Backup dulu sebelum ganti versi.
-- Jangan hapus kredit "Template oleh @malikisaputra". Itu syarat lisensinya.
+- Jangan hapus kredit "Template oleh @malikisaputra", dan template ini **tidak boleh diperjualbelikan** tanpa izin. Mau menjual atau kerja sama? Diskusikan dulu dengan kreatornya (@malikisaputra).
 
 Masih bingung? Komen di TikTok/IG **@malikisaputra**, nanti aku bantu.
