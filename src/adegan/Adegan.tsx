@@ -2,7 +2,7 @@
 import React from "react";
 import { interpolate, spring, useCurrentFrame, useVideoConfig } from "remotion";
 import { konten, type NamaWarna } from "../konten";
-import { AKSEN, Header, Kartu, Latar, MONO, PALET, masuk, type Tema } from "../gaya";
+import { AKSEN, Gambar, Header, Kartu, Latar, MONO, PALET, masuk, type Tema } from "../gaya";
 
 const Tengah: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <div style={{ position: "absolute", inset: "330px 72px 260px", display: "flex", flexDirection: "column", justifyContent: "center", gap: 40 }}>{children}</div>
@@ -73,6 +73,7 @@ export const Hasil: React.FC = () => {
       <Header tema="terang" kiri={konten.topik} kanan="HASIL" akun={konten.akun} />
       <Tengah>
         <div style={{ fontSize: 110, fontWeight: 800, ...naik(f, 0) }}>{h.judul}</div>
+        <Gambar src={konten.gambar.hasil} style={{ width: "100%", maxHeight: 420, objectFit: "cover", borderRadius: 28, border: `2px solid ${PALET.terang.garis}`, ...naik(f, 8) }} />
         {h.poin.map((t, j) => (
           <Kartu key={t} tema="terang" style={{ padding: "40px 48px", display: "flex", alignItems: "center", gap: 32, ...naik(f, 15 + j * 15) }}>
             <div style={{ width: 70, height: 70, borderRadius: 35, background: AKSEN.hijau, color: "#fff", fontSize: 44, display: "grid", placeItems: "center", flexShrink: 0 }}>✓</div>
@@ -94,7 +95,10 @@ export const Ajakan: React.FC = () => {
         <div style={{ fontSize: 130, fontWeight: 800, transform: `scale(${s})`, transformOrigin: "left" }}>{a.judul}</div>
         {a.baris.map((t, j) => (
           <div key={t} style={{ fontSize: 54, fontWeight: 700, padding: "34px 44px", borderRadius: 999, border: `3px solid ${warna[j % 2]}`, color: warna[j % 2], ...naik(f, 20 + j * 15) }}>{t}</div>))}
-        <div style={{ fontFamily: MONO, fontSize: 36, color: PALET.gelap.redup, ...naik(f, 55) }}>{konten.akun}</div>
+        <div style={{ display: "flex", alignItems: "center", gap: 28, fontFamily: MONO, fontSize: 36, color: PALET.gelap.redup, ...naik(f, 55) }}>
+          <Gambar src={konten.gambar.profil} style={{ width: 150, height: 150, borderRadius: 75, objectFit: "cover", border: `4px solid ${AKSEN.ungu}` }} />
+          {konten.akun}
+        </div>
       </Tengah>
     </Latar>
   );

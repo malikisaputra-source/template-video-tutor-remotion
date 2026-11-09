@@ -18,6 +18,14 @@ export const konten = {
   },
   hasil: { judul: "Hasilnya", poin: ["Jawaban lebih terarah", "Bahasa sesuai pembaca", "Format rapi, siap pakai"], durasi: 105 },
   ajakan: { judul: "Simpan & coba!", baris: ["Follow untuk tips berikutnya", "Share ke teman yang butuh"], durasi: 90 },
+  // LOGO & FOTO — nama berkas di folder public/. Ganti = timpa berkas bernama sama atau ubah nama di sini.
+  // Kosongkan ("") untuk menyembunyikan slot. Logo kosong/gagal dimuat = inisial dari akun.
+  gambar: {
+    logo: "logo.svg",        // 1:1, tampil di header tiap adegan
+    watermark: true,         // logo kecil transparan di pojok kanan bawah sepanjang video
+    hasil: "hasil.svg",      // 16:9, tangkapan layar hasil di adegan "Hasilnya"
+    profil: "profil.svg",    // 1:1, foto/avatar kamu di adegan ajakan
+  },
 } as const;
 
 export type NamaWarna = "biru" | "oranye" | "hijau" | "ungu";

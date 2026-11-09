@@ -1,6 +1,7 @@
 /* kredit-maliki: Template oleh Maliki Saputra (@malikisaputra) — https://malikisaputra.biz.id. Lisensi MIT + wajib atribusi (lihat LICENSE). */
 import React from "react";
-import { AbsoluteFill, Easing, interpolate, useCurrentFrame } from "remotion";
+import { AbsoluteFill, Easing, Img, interpolate, staticFile, useCurrentFrame } from "remotion";
+import { konten } from "./konten";
 
 export const AKSEN = { biru: "#3b82f6", oranye: "#f59e0b", hijau: "#10b981", ungu: "#a855f7" } as const;
 export const SANS = "Inter, 'Helvetica Neue', Arial, sans-serif";
@@ -23,12 +24,25 @@ export const Latar: React.FC<{ tema: Tema; children: React.ReactNode }> = ({ tem
   );
 };
 
+// Gambar dari public/ (nama di konten.gambar). Gagal dimuat = cadangan (mis. inisial), render tidak gagal.
+export const Gambar: React.FC<{ src: string; style?: React.CSSProperties; cadangan?: React.ReactNode }> = ({ src, style, cadangan = null }) => {
+  const [gagal, setGagal] = React.useState(false);
+  if (!src || gagal) return <>{cadangan}</>;
+  return <Img src={staticFile(src)} style={style} onError={() => setGagal(true)} />;
+};
+
+const inisial = konten.akun.replace(/^@/, "").slice(0, 2).toUpperCase();
+export const Logo: React.FC<{ ukuran: number; style?: React.CSSProperties }> = ({ ukuran, style }) => (
+  <Gambar src={konten.gambar.logo} style={{ width: ukuran, height: ukuran, objectFit: "contain", borderRadius: ukuran * 0.22, ...style }}
+    cadangan={<div style={{ width: ukuran, height: ukuran, borderRadius: ukuran / 2, background: AKSEN.biru, color: "#fff", fontFamily: SANS, fontWeight: 800, fontSize: ukuran * 0.4, display: "grid", placeItems: "center", ...style }}>{inisial}</div>} />
+);
+
 export const Header: React.FC<{ tema: Tema; kiri: string; kanan: string; akun: string }> = ({ tema, kiri, kanan, akun }) => {
   const p = PALET[tema];
   return (
     <div style={{ position: "absolute", top: 160, left: 72, right: 72, fontFamily: MONO, color: p.redup, fontSize: 28 }}>
       <div style={{ display: "flex", justifyContent: "space-between" }}><span>{kiri}</span><span style={{ color: AKSEN.biru }}>{kanan}</span></div>
-      <div style={{ marginTop: 8, fontSize: 22 }}>{akun}</div>
+      <div style={{ marginTop: 8, fontSize: 22, display: "flex", alignItems: "center", gap: 12 }}><Logo ukuran={36} />{akun}</div>
     </div>
   );
 };

@@ -41,6 +41,19 @@ public/             tempat musik.mp3 (opsional)
 ## Lisensi
 MIT + syarat tambahan (lihat `LICENSE`): gratis dipakai untuk usaha/organisasi sendiri dan boleh diubah, **wajib mencantumkan kreator** (Template oleh Maliki Saputra, @malikisaputra), dan **tidak boleh diperjualbelikan** tanpa izin. Mau menjual atau kerja sama? Diskusikan dulu dengan kreatornya.
 
+## Ganti logo & foto
+
+Semua slot gambar diatur di `konten.gambar` (`src/konten.ts`); berkasnya di folder `public/`. Ganti dengan **menimpa berkas bernama sama** atau **ubah namanya** di `konten.ts`. Kosongkan (`""`) untuk menyembunyikan slot.
+
+| Slot | Kunci | Placeholder | Rasio | Tampil di |
+|---|---|---|---|---|
+| Logo | `logo` | `public/logo.svg` | 1:1 (PNG transparan ideal) | header tiap adegan |
+| Watermark | `watermark: true/false` | memakai logo | – | pojok kanan bawah sepanjang video |
+| Foto hasil | `hasil` | `public/hasil.svg` | 16:9 | adegan "Hasilnya" |
+| Foto profil | `profil` | `public/profil.svg` | 1:1 | adegan ajakan |
+
+Logo kosong atau gagal dimuat otomatis diganti inisial dari `akun`; foto yang gagal dimuat disembunyikan tanpa menggagalkan render. Placeholder berlabel ini bukan foto asli, jadi ganti sebelum render final.
+
 ## Kredit
 Dibuat oleh Maliki Studio — malikisaputra.biz.id, follow TikTok/IG @malikisaputra
 
