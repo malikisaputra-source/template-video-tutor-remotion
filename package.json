@@ -2,7 +2,7 @@
   "name": "template-video-tutor-remotion",
   "version": "1.0.0",
   "private": true,
-  "license": "MIT",
+  "license": "SEE LICENSE IN LICENSE",
   "scripts": {
     "studio": "remotion studio",
     "render": "remotion render TutorReels out/video.mp4",
